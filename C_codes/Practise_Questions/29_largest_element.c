@@ -10,8 +10,13 @@ int main(){
         scanf("%d",&arr[i]);
     }
     for (int j=0;j<arlen;j++){
-        if (arr[j]>largest_element){
+        if (arr[j]<largest_element){
             largest_element = arr[j];
+            }
+    }
+    for (int k=0;k<arlen;k++){
+        if (arr[k]>largest_element){
+            largest_element = arr[k];
             }
     }
     printf("The largest element in the array is: %d",largest_element);
