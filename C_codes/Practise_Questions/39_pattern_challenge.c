@@ -10,7 +10,7 @@ Write a program to print the following pattern:
 int main(){
     int row = 5; // Decleared variable and initialized it, but we can make it interactive by taking input for this variable
     for (int i=1;i<=row;i++){ // loop for number of rows
-        for (int j=1;j<=i;j++){ 
+        for (int j=1;j<=i;j++){ // to print halve number triangle
             if (j == 1)
             {
                 for (int k=1;k<=(row-i);k++){
