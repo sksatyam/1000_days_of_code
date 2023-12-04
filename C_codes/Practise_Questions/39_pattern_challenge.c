@@ -11,13 +11,13 @@ int main(){
     int row = 5; // Decleared variable and initialized it, but we can make it interactive by taking input for this variable
     for (int i=1;i<=row;i++){ // loop for number of rows
         for (int j=1;j<=i;j++){ // to print halve number triangle
-            if (j == 1)
+            if (j == 1) // this block of code is for print upper inverted white-spaced right triangle
             {
                 for (int k=1;k<=(row-i);k++){
                     printf("  ");
                 } 
             }
-            printf("%d ",j);
+            printf("%d ",j); 
         }
         for (int l=0;l<(i-1);l++){
             printf("%d ",(i-1)-l);
