@@ -9,6 +9,8 @@ Write a program to print the following pattern:
 #include<stdio.h>
 int main(){
     int row = 5; // Decleared variable and initialized it, but we can make it interactive by taking input for this variable
+    printf("Enter Maximum number of rows: ");
+    scanf("%d",&row);
     for (int i=1;i<=row;i++){ // loop for number of rows
         for (int j=1;j<=i;j++){ // to print halve number triangle
             if (j == 1) // this block of code is for print upper inverted white-spaced right triangle
