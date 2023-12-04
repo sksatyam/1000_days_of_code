@@ -19,10 +19,10 @@ int main(){
             }
             printf("%d ",j); 
         }
-        for (int l=0;l<(i-1);l++){
+        for (int l=0;l<(i-1);l++){ // this block of code is actully printing right-trianlge at the right side
             printf("%d ",(i-1)-l);
             }
-        printf("\n");
+        printf("\n"); // this is printing new line for the entire triangle
     }
     return 0;
 }
