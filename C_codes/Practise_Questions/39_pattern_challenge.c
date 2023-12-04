@@ -8,7 +8,7 @@ Write a program to print the following pattern:
 */
 #include<stdio.h>
 int main(){
-    int row = 5;
+    int row = 5; // Decleared variable and initialized it, but we can make it interactive by taking input for this variable
     for (int i=1;i<=row;i++){
         for (int j=1;j<=i;j++){
             if (j == 1)
