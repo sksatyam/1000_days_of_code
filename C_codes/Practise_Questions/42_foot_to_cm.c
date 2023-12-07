@@ -4,6 +4,6 @@ int main(){
     int foot;
     printf("Enter a number you want to convert: ");
     scanf("%d",&foot);
-    printf("%d foot into cm is %f",foot,foot*30.48);
+    printf("%d foots is equals to %f cm",foot,foot*30.48);
     return 0;
 }
