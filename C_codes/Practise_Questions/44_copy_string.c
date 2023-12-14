@@ -1,7 +1,6 @@
 // Write a program to copy a string from one variable to another
 
 #include<stdio.h>
-#include<string.h>
 void strcopy(char *arr, char *arr2){
     int i;
     for (i=0;arr[i] != '\0' ;i++){
