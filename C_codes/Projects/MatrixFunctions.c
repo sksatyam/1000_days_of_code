@@ -1,3 +1,4 @@
+// In this file i am going to create some functions that will perform some basic operations on a matrix
 #include<stdio.h>
 void arrayRow(int arr[][k], int a, int c){
     for (int i=0;i<4;i++){
