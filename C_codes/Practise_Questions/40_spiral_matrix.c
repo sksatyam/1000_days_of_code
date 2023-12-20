@@ -7,6 +7,13 @@ void spriralprintrow(int arr[][4], int rowno){//This function is going to print 
     }
     
 }
+void spriralprintcol(int arr[][4], int colno){//This function is going to print any row you wish
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%d  ",arr[i][colno]);
+    }
+    
+}
 int main(){
     int arr[4][4] = {{1,2,3,11},{4,5,6,12},{7,8,9,13},{15,16,17,18}};
     spriralprintrow(arr,2);
