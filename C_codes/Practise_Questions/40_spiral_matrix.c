@@ -1,6 +1,7 @@
 // Write a program in which user will first enter a matrix and than our program shuld return the values of the matrix at the spiral positions od the matrix
 #include<stdio.h> // we are going to use scanf and printf so, I am  including it.
 void spriralprintrow(int arr[][4], int rowno, int lowlim,int uperlim){//This function is going to print any row you wish
+    // This function will print alements of a specific row within a range this include lower limit but excludes upperlimit
     for (int i = lowlim; i < uperlim ; i++)
     {
         printf("%d  ",arr[rowno][i]);
@@ -8,6 +9,7 @@ void spriralprintrow(int arr[][4], int rowno, int lowlim,int uperlim){//This fun
     
 }
 void spriralprintcol(int arr[][4], int colno,int lowlim,int uperlim){//This function is going to print any row you wish
+    // This function will print alements of a specific col within a range this include lower limit but excludes upperlimit
     for (int i = lowlim; i < uperlim; i++)
     {
         printf("%d  ",arr[i][colno]);
