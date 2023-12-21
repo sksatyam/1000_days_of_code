@@ -11,12 +11,15 @@ int spriralprintrow(int arr[][4], int rowno, int lowlim,int uperlim){//This func
     return count;
     
 }
-void spriralprintcol(int arr[][4], int colno,int lowlim,int uperlim){//This function is going to print any row you wish
+int spriralprintcol(int arr[][4], int colno,int lowlim,int uperlim){//This function is going to print any row you wish
     // This function will print alements of a specific col within a range this include lower limit but excludes upperlimit
+    int count =0;
     for (int i = lowlim; i < uperlim; i++)
     {
         printf("%d  ",arr[i][colno]);
+        count ++;
     }
+    return count;
     
 }
 int main(){
