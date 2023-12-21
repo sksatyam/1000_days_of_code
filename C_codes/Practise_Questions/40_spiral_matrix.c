@@ -32,3 +32,5 @@ int main(){
     }
     return 0;
 }
+// at first I created two function that prints elements of any sprecific row in specific range and column to. now I am going ot create that same function but this will print that elements in reverse orde.
+
