@@ -10,6 +10,17 @@ int spriralprintrow(int arr[][4], int rowno, int lowlim,int uperlim){//This func
     }
     return count;
 }
+
+int spriralprintrowrev(int arr[][4], int rowno, int lowlim,int uperlim){//This function is going to print any row you wish
+    // This function will print alements of a specific row within a range this include lower limit but excludes upperlimit
+    int count =0;
+    for (int i = (uperlim-1); i >=lowlim ; i--)
+    {
+        printf("%d  ",arr[rowno][i]);
+        count++;
+    }
+    return count;
+}
 int spriralprintcol(int arr[][4], int colno,int lowlim,int uperlim){//This function is going to print any row you wish
     // This function will print alements of a specific col within a range this include lower limit but excludes upperlimit
     int count =0;
@@ -20,17 +31,27 @@ int spriralprintcol(int arr[][4], int colno,int lowlim,int uperlim){//This funct
     }
     return count;
 }
+
+int spriralprintcolrev(int arr[][4], int colno,int lowlim,int uperlim){//This function is going to print any row you wish
+    // This function will print alements of a specific col within a range this include lower limit but excludes upperlimit
+    int count =0;
+    for (int i = (uperlim-1); i >= lowlim; i--)
+    {
+        printf("%d  ",arr[i][colno]);
+        count ++;
+    }
+    return count;
+}
 int main(){
     int cnt = 1,rowno = 0,colno = 0,arr[4][4] = {{1,2,3,11},{4,5,6,12},{7,8,9,13},{15,16,17,18}};
     int lowlimrow = 0, upperlimrow = 5,lowlimcol = 0,upperlimcol = 5,rowcount = 0,colcount = 0;
-    while(cnt <=16){
-        if ((cnt%20 )!=0)
-        {
-            cnt += spriralprintrow(arr);
-        }
-        
-    }
+    // while(cnt <=16){
+    //     if ((cnt%20 )!=0)
+    //     {
+    //         cnt += spriralprintrow(arr);
+    //     }
+    // }
+    spriralprintrowrev(arr,1,1,3);
     return 0;
 }
 // at first I created two function that prints elements of any sprecific row in specific range and column to. now I am going ot create that same function but this will print that elements in reverse orde.
-
