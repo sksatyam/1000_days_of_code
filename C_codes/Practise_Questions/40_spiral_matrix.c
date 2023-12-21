@@ -45,12 +45,12 @@ int spriralprintcolrev(int arr[][4], int colno,int lowlim,int uperlim){//This fu
 int main(){
     int cnt = 1,rowno = 0,colno = 0,arr[4][4] = {{1,2,3,11},{4,5,6,12},{7,8,9,13},{15,16,17,18}};
     int lowlimrow = 0, upperlimrow = 5,lowlimcol = 0,upperlimcol = 5,rowcount = 0,colcount = 0;
-    // while(cnt <=16){
-    //     if ((cnt%20 )!=0)
-    //     {
-    //         cnt += spriralprintrow(arr);
-    //     }
-    // }
+    while(cnt <=16){
+        if ((cnt%20 )!=0)
+        {
+            // cnt += spriralprintrow(arr);
+        }
+    }
     return 0;
 }
 // at first I created two function that prints elements of any sprecific row in specific range and column to. now I am going ot create that same function but this will print that elements in reverse orde.
