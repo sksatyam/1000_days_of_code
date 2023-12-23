@@ -48,10 +48,28 @@ int main(){
     while(cnt <16){
         if ((roworcol%2 )==0)
         {
-            cnt += spriralprintrow();
+            if ((revornotrow%2) == 0)
+            {
+                cnt += spriralprintrow();
+                revornotrow++;
+            }
+            else{
+                cnt += spriralprintrowrev();
+                revornotrow++;
+            }
+            
+           
         }
         else{
-            cnt+=spriralprintcol();
+            if ((revornotcol%2) == 0)
+            {
+                cnt += spriralprintcol();
+                revornotcol++;
+            }
+            else{
+                cnt += spriralprintcolrev();
+                revornotcol++;
+            }
         }
     }
     return 0;
