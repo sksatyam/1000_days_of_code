@@ -51,10 +51,13 @@ int main(){
             if ((revornotrow%2) == 0)
             {
                 cnt += spriralprintrow();
+                upperlimrow --;
+                lowlimcol ++;
                 revornotrow++;
             }
             else{
                 cnt += spriralprintrowrev();
+                
                 revornotrow++;
             }
             
@@ -64,6 +67,8 @@ int main(){
             if ((revornotcol%2) == 0)
             {
                 cnt += spriralprintcol();
+                upperlimcol --;
+                
                 revornotcol++;
             }
             else{
