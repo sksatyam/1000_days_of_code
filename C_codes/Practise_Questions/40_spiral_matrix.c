@@ -43,12 +43,15 @@ int spriralprintcolrev(int arr[][4], int colno,int lowlim,int uperlim){//This fu
     return count;
 }
 int main(){
-    int cnt = 1,rowno = 0,colno = 0,arr[4][4] = {{1,2,3,11},{4,5,6,12},{7,8,9,13},{15,16,17,18}};
-    int lowlimrow = 0, upperlimrow = 5,lowlimcol = 0,upperlimcol = 5,rowcount = 0,colcount = 0;
-    while(cnt <=16){
-        if ((cnt%2 )!=0)
+    int cnt = 0,rowno = 0,colno = 0,arr[4][4] = {{1,2,3,11},{4,5,6,12},{7,8,9,13},{15,16,17,18}};
+    int lowlimrow = 0, upperlimrow = 5,lowlimcol = 0,upperlimcol = 5,rowcount = 0,colcount = 0,roworcol = 0,revornotcol =0,revornotrow = 0;
+    while(cnt <16){
+        if ((roworcol%2 )==0)
         {
-            
+            cnt += spriralprintrow();
+        }
+        else{
+            cnt+=spriralprintcol();
         }
     }
     return 0;
