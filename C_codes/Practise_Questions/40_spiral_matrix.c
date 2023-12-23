@@ -48,7 +48,7 @@ int spriralprintcolrev(int arr[][4], int colno, int lowlim, int uperlim)
 }
 int main()
 {
-    int cnt = 0, rowno = 0, colno = 0, arr[4][4] = {{1, 2, 3, 11}, {4, 5, 6, 12}, {7, 8, 9, 13}, {15, 16, 17, 18}};
+    int cnt = 0,func_runs = 1, minrowno = 0, mincolno = 0 , maxrowno = 3, maxcolno = 3, arr[4][4] = {{1, 2, 3, 11}, {4, 5, 6, 12}, {7, 8, 9, 13}, {15, 16, 17, 18}};
     int lowlimrow = 0, upperlimrow = 5, lowlimcol = 0, upperlimcol = 5, rowcount = 0, colcount = 0, roworcol = 0, revornotcol = 0, revornotrow = 0;
     while (cnt < 16)
     {
@@ -60,6 +60,7 @@ int main()
                 upperlimrow--;
                 lowlimcol++;
                 revornotrow++;
+                func_runs ++;
             }
             else
             {
@@ -67,7 +68,13 @@ int main()
                 lowlimrow++;
                 upperlimcol--;
                 revornotrow++;
+                func_runs++;
             }
+            if ((func_runs%4)==0)
+            {
+                minrowno ++;
+            }
+            
         }
         else
         {
@@ -75,14 +82,15 @@ int main()
             {
                 cnt += spriralprintcol();
                 upperlimcol--;
-
                 revornotcol++;
+                func_runs++;
             }
             else
             {
                 cnt += spriralprintcolrev();
                 lowlimcol++;
                 revornotcol++;
+                func_runs++;
             }
         }
     }
