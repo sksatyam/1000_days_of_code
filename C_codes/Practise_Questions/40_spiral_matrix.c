@@ -57,7 +57,8 @@ int main(){
             }
             else{
                 cnt += spriralprintrowrev();
-                
+                lowlimrow ++;
+                upperlimcol --;
                 revornotrow++;
             }
             
@@ -73,6 +74,7 @@ int main(){
             }
             else{
                 cnt += spriralprintcolrev();
+                lowlimcol ++;
                 revornotcol++;
             }
         }
