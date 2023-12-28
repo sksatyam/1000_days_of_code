@@ -61,6 +61,7 @@ int main()
                 lowlimcol++;
                 revornotrow++;
                 func_runs ++;
+                minrowno ++;
             }
             else
             {
@@ -68,13 +69,7 @@ int main()
                 lowlimrow++;
                 revornotrow++;
                 func_runs++;
-            }
-            if ((func_runs%4)==0)
-            {
-                minrowno ++;
-                mincolno ++;
                 maxrowno --;
-                maxcolno --;
             }
             
         }
@@ -86,6 +81,7 @@ int main()
                 upperlimcol--;
                 revornotcol++;
                 func_runs++;
+                mincolno ++;
             }
             else
             {
@@ -93,12 +89,6 @@ int main()
                 lowlimcol++;
                 revornotcol++;
                 func_runs++;
-            }
-            if ((func_runs%4)==0)
-            {
-                minrowno ++;
-                mincolno ++;
-                maxrowno --;
                 maxcolno --;
             }
         }
