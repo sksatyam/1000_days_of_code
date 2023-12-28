@@ -56,7 +56,7 @@ int main()
         {
             if ((revornotrow % 2) == 0)
             {
-                cnt += spriralprintrow();
+                cnt += spriralprintrow(arr,minrowno,lowlimrow,upperlimrow);
                 upperlimrow--;
                 lowlimcol++;
                 revornotrow++;
@@ -65,7 +65,7 @@ int main()
             }
             else
             {
-                cnt += spriralprintrowrev();
+                cnt += spriralprintrowrev(arr,maxrowno,lowlimrow,upperlimrow);
                 lowlimrow++;
                 revornotrow++;
                 func_runs++;
@@ -77,7 +77,7 @@ int main()
         {
             if ((revornotcol % 2) == 0)
             {
-                cnt += spriralprintcol();
+                cnt += spriralprintcol(arr,mincolno,lowlimcol,upperlimcol);
                 upperlimcol--;
                 revornotcol++;
                 func_runs++;
@@ -85,7 +85,7 @@ int main()
             }
             else
             {
-                cnt += spriralprintcolrev();
+                cnt += spriralprintcolrev(arr,maxcolno,lowlimcol,upperlimcol);
                 lowlimcol++;
                 revornotcol++;
                 func_runs++;
