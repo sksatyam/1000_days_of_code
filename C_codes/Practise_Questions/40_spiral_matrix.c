@@ -66,7 +66,6 @@ int main()
             {
                 cnt += spriralprintrowrev();
                 lowlimrow++;
-                upperlimcol--;
                 revornotrow++;
                 func_runs++;
             }
