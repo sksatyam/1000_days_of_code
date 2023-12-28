@@ -16,7 +16,7 @@ int spriralprintrowrev(int arr[][4], int rowno, int lowlim, int uperlim)
 { // This function is going to print any row you wish
     // This function will print alements of a specific row within a range this include lower limit but excludes upperlimit
     int count = 0;
-    for (int i = (uperlim - 1); i >= lowlim; i--)
+    for (int i = (uperlim); i >= lowlim; i--)
     {
         printf("%d  ", arr[rowno][i]);
         count++;
@@ -39,7 +39,7 @@ int spriralprintcolrev(int arr[][4], int colno, int lowlim, int uperlim)
 { // This function is going to print any row you wish
     // This function will print alements of a specific col within a range this include lower limit but excludes upperlimit
     int count = 0;
-    for (int i = (uperlim - 1); i >= lowlim; i--)
+    for (int i = (uperlim); i >= lowlim; i--)
     {
         printf("%d  ", arr[i][colno]);
         count++;
@@ -49,7 +49,7 @@ int spriralprintcolrev(int arr[][4], int colno, int lowlim, int uperlim)
 int main()
 {
     int cnt = 0,func_runs = 1, minrowno = 0, mincolno = 0 , maxrowno = 3, maxcolno = 3, arr[4][4] = {{1, 2, 3, 11}, {4, 5, 6, 12}, {7, 8, 9, 13}, {15, 16, 17, 18}};
-    int lowlimrow = 0, upperlimrow = 5, lowlimcol = 0, upperlimcol = 5, rowcount = 0, colcount = 0, roworcol = 0, revornotcol = 0, revornotrow = 0;
+    int lowlimrow = 0, upperlimrow = 4, lowlimcol = 0, upperlimcol = 4, rowcount = 0, colcount = 0, roworcol = 0, revornotcol = 1, revornotrow = 0;
     while (cnt < 16)
     {
         if ((roworcol % 2) == 0)
@@ -71,6 +71,7 @@ int main()
                 func_runs++;
                 maxrowno --;
             }
+            roworcol ++;
             
         }
         else
@@ -91,6 +92,7 @@ int main()
                 func_runs++;
                 maxcolno --;
             }
+            roworcol ++;
         }
     }
     return 0;
