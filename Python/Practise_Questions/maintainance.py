@@ -3,3 +3,8 @@ print("This is maintainance modefication")
 print("sick leave")
 print("taking leave for now to search sreas")
 print("New Year Celebration")
+print("just a leave for reading some new topics in c programing laguage")
+print("hello")
+print("The Gambleling")
+print("New Year Celebration")
+
