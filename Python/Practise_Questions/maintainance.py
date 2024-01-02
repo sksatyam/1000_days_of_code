@@ -7,4 +7,5 @@ print("just a leave for reading some new topics in c programing laguage")
 print("hello")
 print("The Gambleling")
 print("New Year Celebration")
+print("Yaheko, Nagato and Konan")
 
