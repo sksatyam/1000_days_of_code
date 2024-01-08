@@ -10,4 +10,5 @@ print("New Year Celebration")
 print("Yaheko, Nagato and Konan")
 print("Starting From Today")
 print("Restating 1000 days of code!")
+print("No power")
 
