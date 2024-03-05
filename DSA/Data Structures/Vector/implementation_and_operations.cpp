@@ -9,7 +9,7 @@ void printvec(vector<int> vec){
 }
 int main(){
 
-/*
+
     // this is the way to declear a vector if we wnat to provide the length of the vbector then we can write the size of the vector in parenthesis here for now i only created a integer type vector but the vector can be any primitive data type
     vector<int> firstvec;
     vector<int> sizevec(10);
@@ -41,10 +41,10 @@ int main(){
     for (int ele:firstvec){
         cout<< ele<<endl;
     }
-*/
 
 
-/*
+
+
     // Now Some Basic operations on vectors
 
     // Push element at the end of the vector
@@ -68,20 +68,20 @@ int main(){
     fivevec.resize(10); // this method is used to resize a vector
     cout<<"size of the vector: "<< fivevec.size()<<endl;
     cout<<"Capacity of the vector: "<< fivevec.capacity()<<endl; // capacity of the vector increases to the power of 2
-*/
+
 
 
 // Looping in Vector
 
-    // vector <int> sixvec;
-    // int ele;
-    // for(int i = 0; i<5;i++){
-    //     cin>>ele;
-    //     sixvec.push_back(ele);
+    vector <int> sixvec;
+    int ele;
+    for(int i = 0; i<5;i++){
+        cin>>ele;
+        sixvec.push_back(ele);
 
-    // }
-    // printvec(sixvec);
-    // cout<<endl;
+    }
+    printvec(sixvec);
+    cout<<endl;
 
     // Taking input in an vector in the same way of array;
 
