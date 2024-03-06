@@ -1,3 +1,6 @@
+// This program is written by Ma'am and debug by Sreas
+
+
 #include<iostream>
 
 
