@@ -1,5 +1,7 @@
 // Write a Program to find the largest and second largest element in an Array
 
+// We also can assign INT_MIN to min variable this will automatically assign the minimux number in that variable 
+
 #include<iostream>
 using namespace std;
 int main(){
