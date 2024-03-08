@@ -15,7 +15,9 @@ class queue{
             cin>>arr[++top];
         }
     }
-    void pop(){}
+    void pop(){
+        
+    }
 
 };
 
