@@ -37,13 +37,16 @@ int main(){
         switch (choice){
             case 1:
                 q1.push();
+                break;
             case 2:
                 q1.pop();
+                break;
             default:
                 cout <<"Enter a Valid Choice!"<< endl;
-                cin >> user;
+            
         }
         cout<< "Do You want to coninue(y/n): ";
+        cin >> user;
 
 
     }while(user == 'y' || user == 'Y');
