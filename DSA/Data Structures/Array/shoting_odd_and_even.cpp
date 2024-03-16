@@ -18,9 +18,7 @@ void sort_oddeven(vector<int> &v){
         else if(v[right]%2 !=0){
             right--;
         }
-        if(left >= right){
-            break;
-        }
+        
     }
     for(int i :v){
         cout << i <<" ";
