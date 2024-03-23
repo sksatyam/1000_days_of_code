@@ -21,6 +21,22 @@ int index_of_max_1s(vector<vector<int>> &v){
 
 }
 
+int alternate_max_1s(vector<vector<int>>&v){
+    int maxIndex = -1;
+    int secLoop = v[0].size();
+    for (int i = 0;i<v.size();i++){
+        for (int j = 0;j<secLoop;j++){
+            if(v[i][j] == 1){
+                secLoop = j;
+                maxIndex = i;
+                break;
+            }
+        }
+    }
+    return maxIndex;
+
+}
+
 int main(){
     int m,n;
     cout<< "Enter the size of the 2d array: ";
@@ -32,6 +48,7 @@ int main(){
             cin>> sam[i][j];
         }
     }
-    cout << index_of_max_1s(sam);
+    cout << index_of_max_1s(sam) << endl;
+    cout << alternate_max_1s(sam);
     return 0;
 }
