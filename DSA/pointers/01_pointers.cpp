@@ -19,9 +19,16 @@ int main(){
     // Types of pointers
     /*
     Majorly there are four types of pointers in c++ 
-    i)   Null pointer
+    i)   Null pointer: If we want to have a pointer variable which is just decleared  but get address latter to store, then in this case we creates a null pointer. the only problem with the null pointer is that is we try to derefference it then we will get segmentation fault error at run time.
+    below are three ways to create a null pointer
+    int *p = Null;
+    int *p2 = 0; // 0 is specially reserved memory address in many os.
+    int *p3 = '\0';
+
     ii)  Wild pointer: Awild pointer is a type of pointer where user decleares a pointer but not initalize it.Due top this it endup pointing some random memory location, Due to this we might get some undefined beheviour and crashes. In soe case we might get segmentation fault(it happens when we tries to access the memory that is not allocated to our program and or when we points any crupted area or when our memory is full.)
-    iii) Dangling Pointer
+
+    iii) Dangling Pointer: It is a type of function that points to a memory location that is not valid
+    
     iv)  Void Pointer
     */
 
