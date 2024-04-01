@@ -28,8 +28,12 @@ int main(){
     ii)  Wild pointer: Awild pointer is a type of pointer where user decleares a pointer but not initalize it.Due top this it endup pointing some random memory location, Due to this we might get some undefined beheviour and crashes. In soe case we might get segmentation fault(it happens when we tries to access the memory that is not allocated to our program and or when we points any crupted area or when our memory is full.)
 
     iii) Dangling Pointer: It is a type of function that points to a memory location that is not valid
-    
-    iv)  Void Pointer
+
+    iv)  Void Pointer: this is a type of a generic pointer it can point the value of any datatype, but the only problem with the void pointer is that it can't be derefferenced if we want derefference the than we need to typecast the pointer 
+    syntax for typecasting the pointer is :
+        int x =12;
+        void *p = &x;
+        int *new_ptr = (int*)p;  
     */
 
 
