@@ -16,7 +16,7 @@ int main(){
     int num,num1;
     cout << "Enter A Number: ";
     cin >> num;
-    num1 = fact(num);
-    cout << num1;
+    num = fact(num);
+    cout << num;
     return 0;
 }
