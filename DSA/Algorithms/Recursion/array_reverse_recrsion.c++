@@ -1,9 +1,10 @@
+// Corrected Code: 
 // Write a Program to reverse an array using recursion
 #include<iostream>
 using namespace std;
 int counter = 0;
 void arrayreverse(int arr[],int n){
-    if (n%%2 ==0){
+    if (n%2 ==0){
         if (counter == (n/2)){
             return;
 
@@ -28,10 +29,11 @@ void arrayreverse(int arr[],int n){
 int main(){
     int n;
     cout<< "Enter the size of array: ";
+    cin >> n; 
     int arr[n];
     cout << "Enter elements: ";
     for(int i = 0;i<n;i++){
-        cin << arr[i];
+        cin >> arr[i];
     }
     arrayreverse(arr,n);
     cout << "The New array is : ";
