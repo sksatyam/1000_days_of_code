@@ -18,14 +18,22 @@ int nsum_backtrack(int n){
     return ans;
 
 }
+void nsum_parameterised_recursion(int num,int res){
+    if (num ==0){
+        cout << res;
+    } 
+    nsum_parameterised_recursion(num-1,res+num);
+}
 
 int main(){
-    int n,result,result2;
+    int n,result,result2,pass = 0;
     cout << "Enter a number: ";
     cin >> n;
     result = nsum(n);
     cout << result << " Using normal recursion!"<< endl;
     result2 = nsum_backtrack(n);
     cout << result2<< " Using Back Tracking!"<< endl;
+    nsum_parameterised_recursion(n,0);
+    cout  << " Using paremeterised recursion";
     return 0;
 }
