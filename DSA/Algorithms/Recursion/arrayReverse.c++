@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 void reverse_arr(int arr[],int size,int index){
     if (index>=(size/2)){
