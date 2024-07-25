@@ -28,7 +28,7 @@ public class arrays {
          */
 
  
-        //  ways to declear an array
+        //  ways to declear and initalize an array and same goes for 2d array
         int[] arr; //Here Array is decleared but memory is not allocated for the array
         int arr1[]; //Here also the same case array is decleared but memory is not allocated
 
@@ -43,6 +43,14 @@ public class arrays {
         arrtest = new int[temp]; 
 
 
+
+        // For Each loop in java same same as c++ it is used to iterate array
+        // syntax for for each loop
+        /*
+        for (datatype new_variable_name_foritteration:Array_name){
+            System.out.println(new_variable_name_foritteration);
+        }
+        */
 
 
 
