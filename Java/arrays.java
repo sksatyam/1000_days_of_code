@@ -27,8 +27,24 @@ public class arrays {
         
          */
 
+ 
+        //  ways to declear an array
+        int[] arr; //Here Array is decleared but memory is not allocated for the array
+        int arr1[]; //Here also the same case array is decleared but memory is not allocated
 
-         
+        arr = new int[5]; //Here we allocated memory for the arr. This is how we allocate memory for an array
+
+        int[] arr2 = new int[10]; // Here we decleared and allocated memory to array in the same line
+        int arr3[] = {1,2,3,4,5,6}; // This isi also allowed
+
+        int[] arrtest;
+        System.out.println("Enter the length of the array:- ");
+        int temp = scan.nextInt(); // This is poossible in java but not in c++ because java allows automatic dynamic memory allocation.
+        arrtest = new int[temp]; 
+
+
+
+
 
     }
     
