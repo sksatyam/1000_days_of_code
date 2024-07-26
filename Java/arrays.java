@@ -41,6 +41,7 @@ public class arrays {
         System.out.println("Enter the length of the array:- ");
         int temp = scan.nextInt(); // This is poossible in java but not in c++ because java allows automatic dynamic memory allocation.
         arrtest = new int[temp]; 
+        System.out.println(arr3.length); //This function or method gives the length of the array
 
 
 
