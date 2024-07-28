@@ -50,6 +50,8 @@ public class arrays {
         /*
         for (datatype new_variable_name_foritteration:Array_name){
             System.out.println(new_variable_name_foritteration);
+
+            
         }
         */
 
