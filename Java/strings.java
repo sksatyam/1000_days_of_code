@@ -6,6 +6,23 @@ public class strings {
         
         
         // Checking the equility of strings
+        /*
+            '==' Operator
 
+                Comparison Type: It is used for reference comparison.
+                Behavior: Checks if two references point to the same memory location (i.e., if they are the exact same object).
+                Usage: Primarily used for primitive types and to check if two object references are identical.
+
+        */ 
+
+        /*
+            equals() Method
+
+                Comparison Type: It is used for value comparison.
+                Behavior: Checks if two objects are logically equivalent, meaning their content is the same.
+                Usage: Should be overridden in a class to compare the values of objects of that class
+
+        */
+        
     }
 }
