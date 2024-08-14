@@ -14,9 +14,17 @@ class A{
 }
 
 class B extends A{
-    super(a,b,c);
+    // super(a,b,c); // Only this will not work
     int d;
     int e;
+    B(int a,String b,double c){
+        super(a,b,c);
+    }
+    B(int a,String b,double c,int d,int e ){
+        super(a,b,c);
+        this.d = d;
+        this.e = e; 
+    }
 }
 
 
