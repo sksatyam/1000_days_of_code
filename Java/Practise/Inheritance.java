@@ -50,15 +50,53 @@ class Vehicle{
 
 class Car extends Vehicle{
     // Properties
-    
-    super(Model,Make,year);
-
     private int noOfDoors;
     private String convertible;
+    
+    // Constructors
+    Car(){};
+    
+    Car(String Model, String Make,int year){
+        super(Model,Make,year);
+    }
+    
+    Car(String Model, String Make,int year, int noOfDoors,String convertible){
+        super(Model,Make,year);
+        this.convertible = convertible;
+        this.noOfDoors = noOfDoors;
+    }
 
-    // 
+    // setters
+    void setNoOfDoors(int noOfDoors) {
+        this.noOfDoors = noOfDoors;
+    }
+
+    void setConvertible(String convertible) {
+        this.convertible = convertible;
+    }
+
+    // Getters
+    public int getNoOfDoors() {
+        return noOfDoors;
+    }
+    public String getConvertible() {
+        return convertible;
+    }
+    @Override
+    public String toString(){
+        return "Make: " + getMake()+"\n"+"Model: "+ getModel()+"\n"+"Year: " + getyear() + "\n"+"No of Doors: "+getNoOfDoors()+"\n"+"Convertable: "+getConvertible();
+    }
 }
 
 public class Inheritance {
-    
+    public static void main(String[] args) {
+        Car car = new Car(); 
+        car.setModel("Dzire");
+        car.setMake("Dont Know What is it");
+        car.setyear(2024);
+        car.setConvertible("No");
+        car.setNoOfDoors(4);
+        System.out.println(car);
+
+    }
 }
