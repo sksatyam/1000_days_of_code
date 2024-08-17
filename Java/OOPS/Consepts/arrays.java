@@ -1,3 +1,4 @@
+package OOPS.Consepts;
 import java.util.Scanner;
 
 public class arrays {

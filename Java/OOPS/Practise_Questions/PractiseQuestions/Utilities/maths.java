@@ -1,4 +1,4 @@
-package Utilities;
+package OOPS.Practise_Questions.PractiseQuestions.Utilities;
 
 public class maths {
     public static int add(int a,int b){

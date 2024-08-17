@@ -1,7 +1,7 @@
-package mainPackage;
+package OOPS.Practise_Questions.PractiseQuestions.mainPackage;
 
-import Utilities.maths;
-import Utilities.strings;
+import OOPS.Practise_Questions.PractiseQuestions.Utilities.maths;
+import OOPS.Practise_Questions.PractiseQuestions.Utilities.strings;
 
 public class mainprogram {
     public static void main(String[] args) {

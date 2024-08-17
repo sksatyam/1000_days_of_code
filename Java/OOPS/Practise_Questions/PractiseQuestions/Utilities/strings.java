@@ -1,4 +1,4 @@
-package Utilities;
+package OOPS.Practise_Questions.PractiseQuestions.Utilities;
 
 public class strings {
     public static void concatinate(String a,String b){
