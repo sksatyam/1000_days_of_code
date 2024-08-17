@@ -1,4 +1,4 @@
-package OOPS;
+package OOPS.Consepts;
 
 class test extends MethodOverloading{ // this is how we inherits from a parent class. to inherit weuse 'extends' keyword.
 

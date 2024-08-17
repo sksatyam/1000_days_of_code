@@ -1,4 +1,4 @@
-package Practise;
+package OOPS.Practise_Questions.Practise;
 
 /*
 Question: Create a class Account with private properties accountNumber, balance, and ownerName. Provide public getter and setter methods for these properties. Implement a method deposit() to add money to the account and withdraw() to subtract money from the account, ensuring the balance doesn't go negative.

@@ -1,4 +1,4 @@
-package Practise;
+package OOPS.Practise_Questions.Practise;
 
 /*
  Question: Create a class Book with properties like title, author, price, and ISBN. Write methods to set and get the values of these properties. Create an object of this class and set the values using the methods.

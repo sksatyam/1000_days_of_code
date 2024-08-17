@@ -1,5 +1,5 @@
 // Having Logical error in this program
-package Practise;
+package OOPS.Practise_Questions.Practise;
 import java.time.Year;
 import java.util.*;
 class Depreciation{

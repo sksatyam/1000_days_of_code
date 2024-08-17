@@ -1,4 +1,4 @@
-package Practise;
+package OOPS.Practise_Questions.Practise;
 
 /*
  Question: Create an abstract class Employee with properties name and id, and an abstract method calculateSalary(). Create subclasses FullTimeEmployee and PartTimeEmployee that provide specific implementations of the calculateSalary() method.

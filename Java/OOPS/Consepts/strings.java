@@ -1,3 +1,4 @@
+package OOPS.Consepts;
 public class strings {
     public static void main(String[] args) {
         // There are two ways of creating an string

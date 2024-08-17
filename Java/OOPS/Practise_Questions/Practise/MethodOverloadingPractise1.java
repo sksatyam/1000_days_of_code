@@ -1,4 +1,4 @@
-package Practise;
+package OOPS.Practise_Questions.Practise;
 class calc{
     public void add(int a,int b){
         System.out.println("Sum is : "+ (a+b));

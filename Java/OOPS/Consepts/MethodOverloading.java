@@ -1,4 +1,4 @@
-package OOPS;
+package OOPS.Consepts;
 
 public class MethodOverloading {
     // two or more methods can have same name inside a same class if they accepts different arguments. this featre is knows as method overloading.

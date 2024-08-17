@@ -1,4 +1,4 @@
-package Practise;
+package OOPS.Practise_Questions.Practise;
 
 /*
 Question: Create a class Vehicle with properties make, model, and year. Then create a subclass Car that adds properties like numberOfDoors and convertible. Write methods in both classes to display their respective details.
