@@ -13,7 +13,8 @@ interface B extends A { // if we inherits into a interface from a interface we u
     void sayNo();
 }
 
-class C implements B {
+// class C Implements Interface B
+class C implements B { // when we inherite from an interface into a class we use implements keyyword
     public void sayHello() {
         System.out.println("Hello! forn class C!");
 
@@ -37,11 +38,17 @@ public class Interface {
                 System.out.println("No!");
             }
         };
+
+        // Using methods of obj1
         obj.sayHello();
         obj.sayNo();
+
+        // Instanciating class C
         C obj2 = new C();
+
+        // Using the methods of class C
         obj2.sayHello();
         obj2.sayNo();
+        obj2.sayNo();
     }
-
 }
