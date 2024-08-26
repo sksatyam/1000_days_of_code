@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 
 // Created public class 
-public class Triangle {
+public class Pattern02 {
 	
 	// main method
 	public static void main(String[] args) {
