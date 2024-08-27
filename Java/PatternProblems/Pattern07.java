@@ -24,7 +24,8 @@ public class Pattern07 {
                 if (j < userInp-i-1){
                     System.out.print("  ");
                 }
-                if (j>=userInp-i-1 && j<) {
+                int x = userInp-i-1;
+                if (j>=x) {
                     System.out.print(" *");
                 }
 
