@@ -19,7 +19,6 @@ public class Pattern11 {
 
         for (int i = 0; i < userInp; i++) {
             for (int j = 0; j <= i; j++) {
-                int bChoice = 0;
                 if ((i + j) % 2 == 0) {
                     System.out.print(1 + " ");
 
