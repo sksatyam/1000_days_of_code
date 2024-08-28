@@ -1,67 +1,69 @@
-package OOPS.Practise_Questions.Practise;
+// package OOPS.Practise_Questions.Practise;
 
 /*
 Question: Create a class Vehicle with properties make, model, and year. Then create a subclass Car that adds properties like numberOfDoors and convertible. Write methods in both classes to display their respective details.
 Focus: Understanding "is-a" relationships and using the extends keyword.
 */
 
-class Vehicle{
+class Vehicle {
     // Properties
-    private String Model,Make;
+    private String Model, Make;
     private int year;
 
     // Default Constructor Non Parameterised Connstructor
-    Vehicle(){};
+    Vehicle() {
+    };
 
     // Parameterised Constructor
-    Vehicle(String Model, String Make,int year){
+    Vehicle(String Model, String Make, int year) {
         this.Make = Make;
         this.Model = Model;
         this.year = year;
     }
 
     // Setters
-    void setMake(String Make){
+    void setMake(String Make) {
         this.Make = Make;
     }
 
-    void setModel(String Model){
+    void setModel(String Model) {
         this.Model = Model;
     }
 
-    void setyear(int year){
+    void setyear(int year) {
         this.year = year;
     }
 
-    // Getter 
-    int getyear(){
+    // Getter
+    int getyear() {
         return this.year;
     }
 
-    String getMake(){
+    String getMake() {
         return this.Make;
     }
 
-    String getModel(){
+    String getModel() {
         return this.Model;
     }
 
 }
 
-class Car extends Vehicle{
+class Car extends Vehicle {
     // Properties
     private int noOfDoors;
     private String convertible;
-    
+
     // Constructors
-    Car(){};
-    
-    Car(String Model, String Make,int year){
-        super(Model,Make,year);
+    Car() {
+    };
+
+    Car(String Model, String Make, int year) {
+        super(Model, Make, year);
     }
-    
-    Car(String Model, String Make,int year, int noOfDoors,String convertible){
-        super(Model,Make,year);
+
+    Car(String Model, String Make, int year, int noOfDoors, String convertible) {
+        super(Model, Make, year);
         this.convertible = convertible;
         this.noOfDoors = noOfDoors;
     }
@@ -79,18 +81,21 @@ class Car extends Vehicle{
     public int getNoOfDoors() {
         return noOfDoors;
     }
+
     public String getConvertible() {
         return convertible;
     }
+
     @Override
-    public String toString(){
-        return "Make: " + getMake()+"\n"+"Model: "+ getModel()+"\n"+"Year: " + getyear() + "\n"+"No of Doors: "+getNoOfDoors()+"\n"+"Convertable: "+getConvertible();
+    public String toString() {
+        return "Make: " + getMake() + "\n" + "Model: " + getModel() + "\n" + "Year: " + getyear() + "\n"
+                + "No of Doors: " + getNoOfDoors() + "\n" + "Convertable: " + getConvertible();
     }
 }
 
 public class Inheritance {
     public static void main(String[] args) {
-        Car car = new Car(); 
+        Car car = new Car();
         car.setModel("Dzire");
         car.setMake("Dont Know What is it");
         car.setyear(2024);
