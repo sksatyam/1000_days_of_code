@@ -1,4 +1,4 @@
-package OOPS.Consepts;
+// package OOPS.Consepts;
 
 // In interface by default all the functions are public and abstract
 // if we create a variable in interface then by default all its variables are final and static
