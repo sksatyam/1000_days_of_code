@@ -30,9 +30,9 @@ public class Pattern09 {
             System.out.println();
 
         }
-        noOfStars -= 2;
-        for (int i = 0; i < userInp; i++) {
-            for (int j = 0; j < i; j++) {
+        noOfStars -= 4;
+        for (int i = 0; i < (userInp - 1); i++) {
+            for (int j = 0; j <= i; j++) {
                 System.out.print("  ");
             }
 
