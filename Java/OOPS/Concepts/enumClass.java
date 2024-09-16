@@ -12,6 +12,7 @@ enum Laptop {
 
     private int price;
 
+    // we can also do constructor overloading for flexiblity
     private Laptop(int price) { // Here we are creating the private constructor because it is gonna called from
                                 // the same class. it is also means we can't create object of this class out
                                 // side of this class, and in this case we are not creating its objects outside
