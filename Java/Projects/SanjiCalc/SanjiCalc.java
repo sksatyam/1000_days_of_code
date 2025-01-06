@@ -226,6 +226,39 @@ public class SanjiCalc {
             }
         });
 
+        btnSubtract.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                first_Num -= Double.parseDouble(second_Num);
+                seqence += "-";
+                display.setText(seqence);
+
+            }
+        });
+
+        btnMultiply.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                first_Num *= Double.parseDouble(second_Num);
+                seqence += "x";
+                display.setText(seqence);
+
+            }
+        });
+
+        btnDivide.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                first_Num += Double.parseDouble(second_Num);
+                seqence += "/";
+                display.setText(seqence);
+
+            }
+        });
+
+        btnEquals.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                display.setText();
+
+            }
+        });
         // Add buttons to the frame
         frame.add(btnDel);
         frame.add(btnDivide);
