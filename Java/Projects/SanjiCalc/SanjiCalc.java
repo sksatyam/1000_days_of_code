@@ -81,6 +81,25 @@ class Func {
         return arr;
     }
 
+    class ArrayPair { // this function is not been tested yet
+        //
+        double[] arrayOfDoubles;
+        char[] arrayOfOperators;
+
+        ArrayPair() {
+
+        }
+
+        public ArrayPair(double[] arraydb, char[] arraych) {
+            arrayOfDoubles = new double[arraydb.length];
+            arrayOfOperators = new char[arraych.length];
+
+            System.arraycopy(arraydb, 0, arrayOfDoubles, 0, arraydb.length);
+            System.arraycopy(arraych, 0, arrayOfOperators, 0, arraych.length);
+
+        }
+    }
+
     public ArrayPair stringToArray(String str) { // Error is here becase I didn,t create ArrayPair class So I am
                                                  // thinking to return that result in a 2d array instead of creating a
                                                  // class but this may be wrong in this case but let see.
@@ -102,6 +121,21 @@ class Func {
         arrayOfDoubles[cnt_dubl++] = Double.parseDouble(str.substring(startIndex));
 
         return new ArrayPair(arrayOfDoubles, arrayOfOperators);
+
+    }
+
+    class mainLogic {
+        Func fn = new Func();
+        String str;
+        double result = 0;
+
+        mainLogic(String str) {
+            this.str = str;
+        }
+
+        int[] arr = fn.charAndDigitCounter(str);
+
+        ArrayPair Arrpr = new ArrayPair();
 
     }
 
