@@ -46,7 +46,6 @@ class Func {
 
     // Main Switch case function to perform Operation
     public void arithmeticPerformer(double num2, char symbol) {
-        double result = 1;
         switch (symbol) {
             case '+':
                 result = result + num2;
@@ -131,7 +130,12 @@ class Func {
         char oper = '+';
         for (int i = 0; i < arrayOfDoubles.length; i++) {
             arithmeticPerformer(arrayOfDoubles[i], oper);
-            oper = arrayOfOperators[i];
+            System.out.println(result);
+            try {
+                oper = arrayOfOperators[i];
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
         }
     }
 
