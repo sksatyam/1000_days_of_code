@@ -1,20 +1,31 @@
+// TODO: Create a switch-case function for the main logic 
+// create a function that counts the number of times arithmetic operation need to perform {then we will find out  the total number of numbers we have by simply adding 1 in that number}
+// then create a array funcion that seperate the numbers and and the operators in a 2d array
+// then create a main class where main logic work will be done means will use the the functions that create will used and generate the final result {will also done by a method in that class}
+
+import javax.management.openmbean.ArrayType;
 import javax.swing.*;
 import java.awt.event.*;
 
 class Func {
-    public boolean isNum(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+    // function to check is any string a double or not
+    // public boolean isNum(String str) {
+    // try {
+    // Double.parseDouble(str);
+    // return true;
+    // } catch (Exception e) {
+    // return false;
+    // }
+
+    // }
+    public boolean isNum(char str) {
+        return Character.isDigit(str);
     }
 
     public int[] range(String str) {
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
-            boolean temp = isNum(Character.toString(str.charAt(i)));
+            boolean temp = isNum(str.charAt(i));
             if (temp || str.charAt(i) == '.') {
                 count += 1;
             } else {
@@ -26,7 +37,73 @@ class Func {
         arr[1] = count;
         return arr;
     }
-}
+
+    // Main Switch case function to perform Operation
+    public double arithmeticPerformer(double num1, double num2, char symbol) {
+        double result = 1;
+        switch (symbol) {
+            case '+':
+                result = num1 + num2;
+                return result;
+
+            case '-':
+                result = num1 - num2;
+                return result;
+            case 'x':
+                result = num1 * num2;
+                return result;
+            case '/':
+                result = num1 / num2;
+                return result;
+            case '^':
+                for (int i = 0; i < num2; i++) {
+                    result *= num1;
+                }
+                return result;
+            default:
+
+                System.out.println("Something is Wrong");
+                return 0.0;
+        }
+    }
+
+    public int[] charAndDigitCounter(String str) {
+        // At index 0 it is the number of operators and index 1 number of numbers;
+        int[] arr = new int[2];
+        arr[0] = 0;
+        arr[1] = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (!isNum(str.charAt(i)) && str.charAt(i) != '.') {
+                arr[0]++;
+            }
+        }
+        arr[1] = arr[0] + 1;
+        return arr;
+    }
+
+    public ArrayPair stringToArray(String str) { // Error is here becase I didn,t create ArrayPair class So I am
+                                                 // thinking to return that result in a 2d array instead of creating a
+                                                 // class but this may be wrong in this case but let see.
+        int[] arr = charAndDigitCounter(str);
+        char[] arrayOfOperators = new char[arr[0]];
+        double[] arrayOfDoubles = new double[arr[1]];
+        int startIndex = 0, endIndex = 0, cnt_optr = 0, cnt_dubl = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (isNum(str.charAt(i)) || str.charAt(i) == '.') {
+            } else {
+                arrayOfOperators[cnt_optr++] = str.charAt(i);
+                arrayOfDoubles[cnt_dubl++] = Double.parseDouble(str.substring(startIndex, i));
+                startIndex = i + 1;
+
+            }
+        }
+
+        arrayOfDoubles[cnt_dubl++] = Double.parseDouble(str.substring(startIndex));
+
+        return new ArrayPair(arrayOfDoubles, arrayOfOperators);
+
+    }
 
 public class SanjiCalc {
     public static int first_Num = 0;
