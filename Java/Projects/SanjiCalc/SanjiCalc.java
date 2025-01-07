@@ -5,6 +5,7 @@
 
 import javax.management.openmbean.ArrayType;
 import javax.swing.*;
+
 import java.awt.event.*;
 
 class Func {
@@ -18,6 +19,11 @@ class Func {
     // }
 
     // }
+
+    public static double result = 0;
+    public static char[] arrayOfOperators;
+    public static double[] arrayOfDoubles;
+
     public boolean isNum(char str) {
         return Character.isDigit(str);
     }
@@ -39,31 +45,29 @@ class Func {
     }
 
     // Main Switch case function to perform Operation
-    public double arithmeticPerformer(double num1, double num2, char symbol) {
+    public void arithmeticPerformer(double num2, char symbol) {
         double result = 1;
         switch (symbol) {
             case '+':
-                result = num1 + num2;
-                return result;
-
+                result = result + num2;
+                break;
             case '-':
-                result = num1 - num2;
-                return result;
+                result = result - num2;
+                break;
             case 'x':
-                result = num1 * num2;
-                return result;
+                result = result * num2;
+                break;
             case '/':
-                result = num1 / num2;
-                return result;
+                result = result / num2;
+                break;
             case '^':
                 for (int i = 0; i < num2; i++) {
-                    result *= num1;
+                    result *= result;
                 }
-                return result;
+                break;
             default:
 
                 System.out.println("Something is Wrong");
-                return 0.0;
         }
     }
 
@@ -100,12 +104,12 @@ class Func {
         }
     }
 
-    public ArrayPair stringToArray(String str) { // Error is here becase I didn,t create ArrayPair class So I am
-                                                 // thinking to return that result in a 2d array instead of creating a
-                                                 // class but this may be wrong in this case but let see.
+    public void stringToArray(String str) { // Error is here becase I didn,t create ArrayPair class So I am
+                                            // thinking to return that result in a 2d array instead of creating a
+                                            // class but this may be wrong in this case but let see.
         int[] arr = charAndDigitCounter(str);
-        char[] arrayOfOperators = new char[arr[0]];
-        double[] arrayOfDoubles = new double[arr[1]];
+        arrayOfOperators = new char[arr[0]];
+        arrayOfDoubles = new double[arr[1]];
         int startIndex = 0, endIndex = 0, cnt_optr = 0, cnt_dubl = 0;
 
         for (int i = 0; i < str.length(); i++) {
@@ -120,24 +124,36 @@ class Func {
 
         arrayOfDoubles[cnt_dubl++] = Double.parseDouble(str.substring(startIndex));
 
-        return new ArrayPair(arrayOfDoubles, arrayOfOperators);
-
     }
 
-    class mainLogic {
-        Func fn = new Func();
-        String str;
-        double result = 0;
-
-        mainLogic(String str) {
-            this.str = str;
+    public void calculate(String str) {
+        stringToArray(str);
+        char oper = '+';
+        for (int i = 0; i < arrayOfDoubles.length; i++) {
+            arithmeticPerformer(arrayOfDoubles[i], oper);
+            oper = arrayOfOperators[i];
         }
-
-        int[] arr = fn.charAndDigitCounter(str);
-
-        ArrayPair Arrpr = new ArrayPair();
-
     }
+
+}
+
+// class mainLogic {
+// Func fn = new Func();
+// String str;
+// double result = 0;
+
+// mainLogic(String str) {
+// this.str = str;
+// }
+
+// int[] arr = fn.charAndDigitCounter(str);
+
+// fn.ArrayPair Arrpr = fn.stringToArray(str);
+
+// for(int i = 0;i<Arrpr.arrayOfDigits.length;i++){
+// }
+//
+// }
 
 public class SanjiCalc {
     public static int first_Num = 0;
@@ -145,7 +161,7 @@ public class SanjiCalc {
     public static String seqence = "";
 
     public static void main(String[] args) {
-
+        Func fn = new Func();
         // Create main frame
         JFrame frame = new JFrame("Improved Calculator");
         frame.setSize(380, 460);
@@ -366,7 +382,9 @@ public class SanjiCalc {
 
         btnEquals.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                display.setText();
+                fn.calculate(seqence);
+                String res = Double.toString(Func.result);
+                display.setText(res);
 
             }
         });
