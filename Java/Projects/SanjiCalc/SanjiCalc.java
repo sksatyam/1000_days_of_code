@@ -183,7 +183,7 @@ public class SanjiCalc {
 
         JButton btnSquare = new JButton("^");
         btnSquare.setBounds(110, 100, 70, 50);
-
+        
         JButton btnSqrt = new JButton("√");
         btnSqrt.setBounds(190, 100, 70, 50);
 
@@ -241,158 +241,170 @@ public class SanjiCalc {
 
         btn0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "0";
-                display.setText(seqence);
                 second_Num += "0";
+                display.setText(seqence+second_Num);
+                
             }
         });
 
         btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "1";
-                display.setText(seqence);
                 second_Num += "1";
+                display.setText(seqence+second_Num);
             }
         });
 
         btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "2";
-                display.setText(seqence);
-
                 second_Num += "2";
+                display.setText(seqence+second_Num);
             }
         });
 
         btn3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "3";
-                display.setText(seqence);
-
                 second_Num += "3";
+                display.setText(seqence+second_Num);
             }
         });
 
         btn4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "4";
-                display.setText(seqence);
-
                 second_Num += "4";
+                display.setText(seqence+second_Num);
             }
         });
 
         btn5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "5";
-                display.setText(seqence);
-
                 second_Num += "5";
+                display.setText(seqence+second_Num);
             }
         });
 
         btn6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "6";
-                display.setText(seqence);
-
                 second_Num += "6";
+                display.setText(seqence+second_Num);
             }
         });
 
         btn7.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "7";
-                display.setText(seqence);
-
                 second_Num += "7";
+                display.setText(seqence+second_Num);
             }
         });
 
         btn8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "8";
-                display.setText(seqence);
-
                 second_Num += "8";
+                display.setText(seqence+second_Num);
             }
         });
 
         btn9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "9";
-                display.setText(seqence);
-
                 second_Num += "9";
+                display.setText(seqence+second_Num);
             }
         });
 
         btnDot.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += ".";
-                display.setText(seqence);
                 if (second_Num.contains(".")) {
-
+                    
                 } else {
-                    seqence += ".";
                     second_Num += ".";
+                    // seqence += second_Num;
                 }
-
+                display.setText(seqence+second_Num);
+                
             }
         });
 
         btnDoubleZero.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence += "00";
-                display.setText(seqence);
+                second_Num += "00";
+                display.setText(seqence+second_Num);
+            }
+        });
+
+        btnDel.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                second_Num = "";
+                seqence= "";
+                display.setText(seqence+second_Num);
             }
         });
 
         btnAdd.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                seqence+=second_Num;
                 seqence += "+";
+               second_Num = "";
                 display.setText(seqence);
+                System.out.println(seqence);
+                System.out.println(second_Num);
 
             }
         });
 
         btnSubtract.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                seqence+=second_Num;
                 seqence += "-";
+                second_Num = "";
                 display.setText(seqence);
-
+                System.out.println(seqence);
+                System.out.println(second_Num);
             }
         });
 
         btnMultiply.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                seqence+=second_Num;
                 seqence += "x";
+                second_Num = "";
                 display.setText(seqence);
+                System.out.println(seqence);
+                System.out.println(second_Num);
 
             }
         });
 
         btnDivide.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                seqence+=second_Num;
                 seqence += "/";
+                second_Num = "";
                 display.setText(seqence);
-
+                System.out.println(seqence);
+                System.out.println(second_Num);
             }
         });
 
         btnSquare.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                seqence+=second_Num;
                 seqence += "^";
+                second_Num = "";
                 display.setText(seqence);
+                System.out.println(seqence);
+                System.out.println(second_Num);
 
             }
         });
 
         btnEquals.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                seqence +=second_Num;
+                second_Num = "";
                 fn.calculate(seqence);
                 String res = Double.toString(Func.result);
                 display.setText(res);
+                Func.result = 0;
+                seqence = "";
 
             }
         });
