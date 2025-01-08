@@ -60,8 +60,8 @@ class Func {
                 result = result / num2;
                 break;
             case '^':
-                for (int i = 0; i < num2; i++) {
-                    result *= result;
+                for (int i = 0; i < num2; i++) { // I dont Know why but suare is not working
+                    result *= num2;
                 }
                 break;
             default:
@@ -181,7 +181,7 @@ public class SanjiCalc {
         JButton btnDel = new JButton("DEL");
         btnDel.setBounds(30, 100, 70, 50);
 
-        JButton btnSquare = new JButton("^2");
+        JButton btnSquare = new JButton("^");
         btnSquare.setBounds(110, 100, 70, 50);
 
         JButton btnSqrt = new JButton("√");
@@ -350,7 +350,6 @@ public class SanjiCalc {
 
         btnAdd.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                first_Num += Double.parseDouble(second_Num);
                 seqence += "+";
                 display.setText(seqence);
 
@@ -359,7 +358,6 @@ public class SanjiCalc {
 
         btnSubtract.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                first_Num -= Double.parseDouble(second_Num);
                 seqence += "-";
                 display.setText(seqence);
 
@@ -368,7 +366,6 @@ public class SanjiCalc {
 
         btnMultiply.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                first_Num *= Double.parseDouble(second_Num);
                 seqence += "x";
                 display.setText(seqence);
 
@@ -377,8 +374,15 @@ public class SanjiCalc {
 
         btnDivide.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                first_Num += Double.parseDouble(second_Num);
                 seqence += "/";
+                display.setText(seqence);
+
+            }
+        });
+
+        btnSquare.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                seqence += "^";
                 display.setText(seqence);
 
             }
