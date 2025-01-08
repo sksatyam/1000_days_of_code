@@ -3,22 +3,12 @@
 // then create a array funcion that seperate the numbers and and the operators in a 2d array
 // then create a main class where main logic work will be done means will use the the functions that create will used and generate the final result {will also done by a method in that class}
 
-import javax.management.openmbean.ArrayType;
 import javax.swing.*;
 
 import java.awt.event.*;
 
 class Func {
-    // function to check is any string a double or not
-    // public boolean isNum(String str) {
-    // try {
-    // Double.parseDouble(str);
-    // return true;
-    // } catch (Exception e) {
-    // return false;
-    // }
 
-    // }
 
     public static double result = 0;
     public static char[] arrayOfOperators;
@@ -84,32 +74,13 @@ class Func {
         return arr;
     }
 
-    class ArrayPair { // this function is not been tested yet
-        //
-        double[] arrayOfDoubles;
-        char[] arrayOfOperators;
-
-        ArrayPair() {
-
-        }
-
-        public ArrayPair(double[] arraydb, char[] arraych) {
-            arrayOfDoubles = new double[arraydb.length];
-            arrayOfOperators = new char[arraych.length];
-
-            System.arraycopy(arraydb, 0, arrayOfDoubles, 0, arraydb.length);
-            System.arraycopy(arraych, 0, arrayOfOperators, 0, arraych.length);
-
-        }
-    }
-
     public void stringToArray(String str) { // Error is here becase I didn,t create ArrayPair class So I am
                                             // thinking to return that result in a 2d array instead of creating a
                                             // class but this may be wrong in this case but let see.
         int[] arr = charAndDigitCounter(str);
         arrayOfOperators = new char[arr[0]];
         arrayOfDoubles = new double[arr[1]];
-        int startIndex = 0, endIndex = 0, cnt_optr = 0, cnt_dubl = 0;
+        int startIndex = 0, cnt_optr = 0, cnt_dubl = 0;
 
         for (int i = 0; i < str.length(); i++) {
             if (isNum(str.charAt(i)) || str.charAt(i) == '.') {
@@ -141,23 +112,6 @@ class Func {
 
 }
 
-// class mainLogic {
-// Func fn = new Func();
-// String str;
-// double result = 0;
-
-// mainLogic(String str) {
-// this.str = str;
-// }
-
-// int[] arr = fn.charAndDigitCounter(str);
-
-// fn.ArrayPair Arrpr = fn.stringToArray(str);
-
-// for(int i = 0;i<Arrpr.arrayOfDigits.length;i++){
-// }
-//
-// }
 
 public class SanjiCalc {
     public static int first_Num = 0;
