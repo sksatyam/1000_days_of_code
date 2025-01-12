@@ -119,6 +119,7 @@ public class SanjiCalc_v2 {
     public static String seqence = "";
 
     public static void main(String[] args) {
+        char oper = '+';
         Func fn = new Func();
         // Create main frame
         JFrame frame = new JFrame("Improved Calculator");
