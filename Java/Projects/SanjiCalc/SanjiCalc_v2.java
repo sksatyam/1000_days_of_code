@@ -3,9 +3,6 @@
 // then create a array funcion that seperate the numbers and and the operators in a 2d array
 // then create a main class where main logic work will be done means will use the the functions that create will used and generate the final result {will also done by a method in that class}
 
-
-
-
 import javax.swing.border.Border;
 import javax.swing.*;
 import java.awt.*;
@@ -16,23 +13,23 @@ class RoundedButton extends JButton {
 
     public RoundedButton(String text) {
         super(text); // Set button text
-        setContentAreaFilled(false); 
-        setFocusPainted(false); 
-        setBorderPainted(false); 
-        
-        
-        // Hover effect: Reduce brightness by 10% on hover (e.g., for a button with rgb(62, 62, 66), darken to approximately rgb(56, 56, 60)).
-        
-        if(text.equals("=")){
+        setContentAreaFilled(false);
+        setFocusPainted(false);
+        setBorderPainted(false);
+
+        // Hover effect: Reduce brightness by 10% on hover (e.g., for a button with
+        // rgb(62, 62, 66), darken to approximately rgb(56, 56, 60)).
+
+        if (text.equals("=")) {
             setForeground(new Color(28, 28, 30)); // Set text color to white
             setBackground(new Color(0, 255, 255)); // Set button background color to grey
-        }
-        else if (text.equals("+")|| text.equals("-")|| text.equals("/") || text.equals("X") ||  text.equals("C") ||  text.equals("DEL")|| text.equals("^")) {
+        } else if (text.equals("+") || text.equals("-") || text.equals("/") || text.equals("X") || text.equals("C")
+                || text.equals("DEL") || text.equals("^")) {
             setForeground(new Color(248, 248, 242)); // Set text color to white
             setBackground(new Color(90, 90, 94)); // Set button background color to grey
         }
 
-        else{ // for all the numerical and and . and 00 buttons
+        else { // for all the numerical and and . and 00 buttons
             setForeground(new Color(248, 248, 242)); // Set text color to white
             setBackground(new Color(62, 62, 66)); // Set button background color to grey
         }
@@ -43,14 +40,14 @@ class RoundedButton extends JButton {
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        //button background rounded corners
+        // button background rounded corners
         g2.setColor(getBackground());
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), cornerRadius, cornerRadius);
 
         // Optional: border
         // g2.setColor(Color.DARK_GRAY); // Border color
-        // g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, cornerRadius, cornerRadius);
-        
+        // g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, cornerRadius,
+        // cornerRadius);
 
         // Call super to paint the text using the setForeground color
         super.paintComponent(g);
@@ -62,9 +59,7 @@ class RoundedButton extends JButton {
     }
 }
 
-
 class Func {
-
 
     public static double result = 0;
     public static char[] arrayOfOperators;
@@ -168,7 +163,6 @@ class Func {
 
 }
 
-
 public class SanjiCalc_v2 {
     public static int first_Num = 0;
     public static String second_Num = "";
@@ -183,9 +177,7 @@ public class SanjiCalc_v2 {
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setBackground(new Color(28, 28, 30));
-
-        
-
+        frame.setResizable(false);
 
         // Display field
         JTextField display = new JTextField();
@@ -194,12 +186,10 @@ public class SanjiCalc_v2 {
         display.setEditable(false);
         display.setHorizontalAlignment(JTextField.RIGHT);
         display.setBackground(new Color(46, 46, 48));
-        display.setForeground(new Color(204,204,204)); 
-        
-        Border border = BorderFactory.createLineBorder(new Color(46,46,48), 2);
+        display.setForeground(new Color(204, 204, 204));
+
+        Border border = BorderFactory.createLineBorder(new Color(46, 46, 48), 2);
         display.setBorder(border);
-
-
 
         // Buttons for first row
         RoundedButton btnDel = new RoundedButton("DEL");
@@ -207,7 +197,7 @@ public class SanjiCalc_v2 {
 
         RoundedButton btnSquare = new RoundedButton("^");
         btnSquare.setBounds(190, 100, 70, 50);
-        
+
         RoundedButton btnClear = new RoundedButton("C");
         btnClear.setBounds(110, 100, 70, 50);
 
@@ -261,21 +251,21 @@ public class SanjiCalc_v2 {
         btnDoubleZero.setBounds(190, 340, 70, 50);
 
         RoundedButton btnEquals = new RoundedButton("=");
-        btnEquals.setBounds(270, 340, 70, 50); 
+        btnEquals.setBounds(270, 340, 70, 50);
 
         btn0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "0";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
-                
+
             }
         });
 
         btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "1";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -283,7 +273,7 @@ public class SanjiCalc_v2 {
         btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "2";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -291,7 +281,7 @@ public class SanjiCalc_v2 {
         btn3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "3";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -299,7 +289,7 @@ public class SanjiCalc_v2 {
         btn4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "4";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -307,7 +297,7 @@ public class SanjiCalc_v2 {
         btn5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "5";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -315,7 +305,7 @@ public class SanjiCalc_v2 {
         btn6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "6";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -323,7 +313,7 @@ public class SanjiCalc_v2 {
         btn7.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "7";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -331,7 +321,7 @@ public class SanjiCalc_v2 {
         btn8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "8";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -339,7 +329,7 @@ public class SanjiCalc_v2 {
         btn9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "9";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -347,21 +337,21 @@ public class SanjiCalc_v2 {
         btnDot.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (second_Num.contains(".")) {
-                    
+
                 } else {
                     second_Num += ".";
                     // seqence += second_Num;
                 }
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
-                
+
             }
         });
 
         btnDoubleZero.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num += "00";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
@@ -369,17 +359,17 @@ public class SanjiCalc_v2 {
         btnDel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num = "";
-                seqence= "";
-                display.setText(seqence+second_Num);
+                seqence = "";
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
 
         btnAdd.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence+=second_Num;
+                seqence += second_Num;
                 seqence += "+";
-               second_Num = "";
+                second_Num = "";
                 display.setText(seqence);
                 System.out.println(seqence);
                 System.out.println(second_Num);
@@ -390,7 +380,7 @@ public class SanjiCalc_v2 {
 
         btnSubtract.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence+=second_Num;
+                seqence += second_Num;
                 seqence += "-";
                 second_Num = "";
                 display.setText(seqence);
@@ -402,7 +392,7 @@ public class SanjiCalc_v2 {
 
         btnMultiply.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence+=second_Num;
+                seqence += second_Num;
                 seqence += "x";
                 second_Num = "";
                 display.setText(seqence);
@@ -415,7 +405,7 @@ public class SanjiCalc_v2 {
 
         btnDivide.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence+=second_Num;
+                seqence += second_Num;
                 seqence += "/";
                 second_Num = "";
                 display.setText(seqence);
@@ -427,7 +417,7 @@ public class SanjiCalc_v2 {
 
         btnSquare.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence+=second_Num;
+                seqence += second_Num;
                 seqence += "^";
                 second_Num = "";
                 display.setText(seqence);
@@ -441,14 +431,14 @@ public class SanjiCalc_v2 {
         btnClear.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 second_Num = "";
-                display.setText(seqence+second_Num);
+                display.setText(seqence + second_Num);
                 frame.requestFocusInWindow();
             }
         });
 
         btnEquals.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                seqence +=second_Num;
+                seqence += second_Num;
                 second_Num = "";
                 fn.calculate(seqence);
                 String res = Double.toString(Func.result);
@@ -461,7 +451,7 @@ public class SanjiCalc_v2 {
         });
         boolean ShiftPressed = false;
         if (ShiftPressed) {
-            
+
         }
         frame.addKeyListener(new KeyAdapter() {
             @Override
@@ -471,24 +461,23 @@ public class SanjiCalc_v2 {
 
                 if (isShiftPressed) {
                     switch (keyCode) {
-                        case KeyEvent.VK_EQUALS: 
-                        btnAdd.doClick();
-                        break;
+                        case KeyEvent.VK_EQUALS:
+                            btnAdd.doClick();
+                            break;
                         case KeyEvent.VK_8:
-                        btnMultiply.doClick();
-                        break;
+                            btnMultiply.doClick();
+                            break;
                         case KeyEvent.VK_6:
-                        btnSquare.doClick();
-                        break;
+                            btnSquare.doClick();
+                            break;
                     }
-                }
-                else{
+                } else {
                     switch (keyCode) {
                         case KeyEvent.VK_0:
-                            btn0.doClick(); 
+                            btn0.doClick();
                             break;
                         case KeyEvent.VK_1:
-                            btn1.doClick(); 
+                            btn1.doClick();
                             break;
                         case KeyEvent.VK_2:
                             btn2.doClick();
@@ -514,30 +503,29 @@ public class SanjiCalc_v2 {
                         case KeyEvent.VK_9:
                             btn9.doClick();
                             break;
-                        case KeyEvent.VK_ADD: 
+                        case KeyEvent.VK_ADD:
                             btnAdd.doClick();
                             break;
-                        case KeyEvent.VK_SUBTRACT:
+                        case KeyEvent.VK_MINUS:
                             btnSubtract.doClick();
                             break;
-    
-                         case KeyEvent.VK_MULTIPLY:
+
+                        case KeyEvent.VK_MULTIPLY:
                             btnMultiply.doClick();
                             break;
-    
-    
+
                         case KeyEvent.VK_DIVIDE:
                         case KeyEvent.VK_SLASH:
                             btnDivide.doClick();
                             break;
                         case KeyEvent.VK_DECIMAL:
-                        case KeyEvent.VK_PERIOD: 
+                        case KeyEvent.VK_PERIOD:
                             btnDot.doClick();
                             break;
                         case KeyEvent.VK_EQUALS:
                             btnEquals.doClick();
                             break;
-                        case KeyEvent.VK_ENTER: 
+                        case KeyEvent.VK_ENTER:
                             btnEquals.doClick();
                             break;
                         case KeyEvent.VK_BACK_SPACE:
@@ -549,14 +537,14 @@ public class SanjiCalc_v2 {
                         default:
                             break;
                     }
-                }                
+                }
             }
         });
-        
+
         // For Focus to the frame
         frame.setFocusable(true);
         frame.requestFocusInWindow();
-        
+
         // Add buttons to the frame
         frame.add(btnDel);
         frame.add(btnDivide);
